@@ -9,8 +9,12 @@ public class App {
 
         Scanner sc = new Scanner(System.in);
 
+        //가장 마지막 명언글의 번호
+        int wiseSayinglastId=0;
+
         outer:
         while (true) {
+
             System.out.printf("명령) ");
             String cmd = sc.nextLine().trim();
             switch (cmd) {
@@ -19,7 +23,8 @@ public class App {
                     String content = sc.nextLine().trim();
                     System.out.printf("작가 : ");
                     String author = sc.nextLine().trim();
-                    System.out.println("1번 명언이 등록되었습니다.");
+                    int id = ++wiseSayinglastId; // 명언 글 번호 증가
+                    System.out.printf("%d번 명언이 등록되었습니다.\n", id);
                     break;
                 case "종료":
                     break outer;
