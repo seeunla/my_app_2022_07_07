@@ -41,10 +41,10 @@ public class AppTest {
         System.setOut(new PrintStream(output));
 
         System.out.println("안녕");
-
+        // 그 동안 System.out.println 으로 모아놨던 문장들을 받아옴
         String rs = output.toString().trim();
 
-        // ㅍ준출력을 원상복구
+        // 표준출력을 원상복구
         System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
         output.close();
 
